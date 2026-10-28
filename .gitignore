@@ -27,3 +27,6 @@ Thumbs.db
 
 # 临时素材（证件照等个人文件，绝不入库）
 _assets_src/
+
+# Vite 临时文件
+vite.config.js.timestamp-*.mjs
