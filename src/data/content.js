@@ -106,19 +106,13 @@ export const strengths = [
 
 export const toolbelt = ['TAPD / Jira', '飞书文档 / Wiki', 'XMind / ProcessOn', 'Excel 数据跟踪']
 
-// 实机记录画廊（可多组）
+// 实机记录画廊
 export const galleries = [
   {
     id: 'pubgm',
     title: '实机记录',
     subtitle: '《和平精英》设置界面 · 手游端实机走查',
     images: Array.from({ length: 11 }, (_, i) => `/assets/pubgm/pubgm-${String(i + 1).padStart(2, '0')}.jpg`),
-  },
-  {
-    id: 'eldenring',
-    title: '关键界面',
-    subtitle: '《艾尔登法环》UI 复刻 · 装备与物品栏',
-    images: ['/assets/eldenring-ui-detail.jpg', '/assets/eldenring-ui-inventory.jpg'],
   },
 ]
 
