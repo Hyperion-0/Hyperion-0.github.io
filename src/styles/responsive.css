@@ -72,7 +72,7 @@
   }
 
   .gallery__item {
-    width: 72vw;
+    height: clamp(180px, 34vw, 320px);
   }
 
   .contact__title {
@@ -388,7 +388,7 @@
   }
 
   .gallery__item {
-    width: 84vw;
+    height: clamp(150px, 44vw, 240px);
   }
 
   /* 优势 */
@@ -506,7 +506,7 @@
   }
 
   .gallery__item {
-    width: 88vw;
+    height: clamp(140px, 46vw, 220px);
   }
 
   .contact__title {

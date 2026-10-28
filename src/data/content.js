@@ -106,13 +106,31 @@ export const strengths = [
 
 export const toolbelt = ['TAPD / Jira', '飞书文档 / Wiki', 'XMind / ProcessOn', 'Excel 数据跟踪']
 
-// 实机记录画廊
+// 实机记录画廊（分组）
 export const galleries = [
   {
     id: 'pubgm',
-    title: '实机记录',
+    title: '设置界面',
     subtitle: '《和平精英》设置界面 · 手游端实机走查',
-    images: Array.from({ length: 11 }, (_, i) => `/assets/pubgm/pubgm-${String(i + 1).padStart(2, '0')}.jpg`),
+    images: [
+      '/assets/pubgm/pubgm-01.jpg',
+      '/assets/pubgm/pubgm-03.jpg',
+      '/assets/pubgm/pubgm-05.jpg',
+      '/assets/pubgm/pubgm-07.jpg',
+      '/assets/pubgm/pubgm-09.jpg',
+      '/assets/pubgm/pubgm-11.jpg',
+    ],
+  },
+  {
+    id: 'activity',
+    title: '活动界面',
+    subtitle: '《和平精英》运营活动 · 界面与视觉呈现',
+    images: [
+      '/assets/activity/activity-01-shuisui.jpg',
+      '/assets/activity/activity-02-mofang.jpg',
+      '/assets/activity/activity-03-shengling.jpg',
+      '/assets/activity/activity-04-rongtu.jpg',
+    ],
   },
 ]
 
