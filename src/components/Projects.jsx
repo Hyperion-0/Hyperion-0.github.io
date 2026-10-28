@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import useReveal from '../hooks/useReveal.js'
-import { projects, gallery } from '../data/content.js'
+import { projects, galleries } from '../data/content.js'
 
 function ProjectCard({ p }) {
   const [ref, revealed] = useReveal()
@@ -12,7 +12,15 @@ function ProjectCard({ p }) {
     >
       <div className={`project__media ${p.image && p.image2 ? 'has-two' : ''}`}>
         {p.video ? (
-          <video src={p.video} autoPlay muted loop playsInline preload="metadata" />
+          <video
+            src={p.video}
+            poster={p.poster}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
         ) : p.image ? (
           <>
             <img className="project__media-a" src={p.image} alt={`${p.title} 主图`} loading="lazy" />
@@ -51,13 +59,14 @@ function ProjectCard({ p }) {
   )
 }
 
-function Gallery() {
+function Gallery({ data }) {
   const [ref, revealed] = useReveal()
   const trackRef = useRef(null)
 
-  // 鼠标按住拖拽滚动
+  // 鼠标按住拖拽滚动（触屏走原生横向滑动）
   const drag = {
     onPointerDown: (e) => {
+      if (e.pointerType === 'touch') return
       const el = trackRef.current
       if (!el) return
       const startX = e.clientX
@@ -80,14 +89,14 @@ function Gallery() {
   return (
     <div ref={ref} className={`gallery reveal ${revealed ? 'is-revealed' : ''}`}>
       <div className="gallery__head">
-        <h3 className="gallery__title">{gallery.title}</h3>
-        <span className="gallery__subtitle">{gallery.subtitle}</span>
+        <h3 className="gallery__title">{data.title}</h3>
+        <span className="gallery__subtitle">{data.subtitle}</span>
         <span className="gallery__hint">按住拖动浏览 →</span>
       </div>
       <div className="gallery__track" ref={trackRef} {...drag}>
-        {gallery.images.map((src, i) => (
+        {data.images.map((src, i) => (
           <figure className="gallery__item" key={src}>
-            <img src={src} alt={`${gallery.title} ${i + 1}`} loading="lazy" draggable="false" />
+            <img src={src} alt={`${data.title} ${i + 1}`} loading="lazy" draggable="false" />
           </figure>
         ))}
       </div>
@@ -116,7 +125,9 @@ export default function Projects() {
           ))}
         </div>
 
-        <Gallery />
+        {galleries.map((g) => (
+          <Gallery key={g.id} data={g} />
+        ))}
       </div>
     </section>
   )

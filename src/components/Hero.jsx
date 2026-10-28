@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero" id="top">
       <video
         className="hero__video"
-        src="/assets/hero-bg.mp4"
+        src="/assets/hero-reel.mp4"
         autoPlay
         muted
         loop

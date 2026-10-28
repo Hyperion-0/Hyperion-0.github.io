@@ -60,9 +60,9 @@ export const projects = [
     subtitle: 'UE4 · UMG / C++ 自研练习',
     desc: '基于 UE4 UMG 复刻《艾尔登法环》装备与角色数据界面：装备栏位布局、物品选中态、属性面板数据绑定与层级导航，还原原作的暗金视觉氛围与信息密度控制。',
     tags: ['UE4', 'UMG', 'C++', 'UI 还原'],
-    results: ['装备 / 置物包 / 角色数据三大面板', '像素级视觉还原'],
-    image: '/assets/eldenring-ui-detail.jpg',
-    image2: '/assets/eldenring-ui-inventory.jpg',
+    results: ['装备 / 置物包 / 角色数据三大面板', '像素级视觉还原', 'UE4 实机操作演示'],
+    video: '/assets/eldenring-demo.mp4',
+    poster: '/assets/eldenring-poster.jpg',
     wide: false,
   },
   {
@@ -72,7 +72,7 @@ export const projects = [
     desc: '自研 UE4 项目的实机运行预览：D3D Shader Model 6 渲染管线下的场景表现与交互逻辑验证。',
     tags: ['UE4', 'D3D SM6', 'Standalone'],
     results: ['64-bit D3D 实机运行验证'],
-    video: '/assets/hero-bg.mp4',
+    video: '/assets/hero-reel.mp4',
     wide: false,
   },
 ]
@@ -106,12 +106,21 @@ export const strengths = [
 
 export const toolbelt = ['TAPD / Jira', '飞书文档 / Wiki', 'XMind / ProcessOn', 'Excel 数据跟踪']
 
-// 实机记录：《和平精英》设置界面手游端实机截图（精选 11 张）
-export const gallery = {
-  title: '实机记录',
-  subtitle: '《和平精英》设置界面 · 手游端实机走查',
-  images: Array.from({ length: 11 }, (_, i) => `/assets/pubgm/pubgm-${String(i + 1).padStart(2, '0')}.jpg`),
-}
+// 实机记录画廊（可多组）
+export const galleries = [
+  {
+    id: 'pubgm',
+    title: '实机记录',
+    subtitle: '《和平精英》设置界面 · 手游端实机走查',
+    images: Array.from({ length: 11 }, (_, i) => `/assets/pubgm/pubgm-${String(i + 1).padStart(2, '0')}.jpg`),
+  },
+  {
+    id: 'eldenring',
+    title: '关键界面',
+    subtitle: '《艾尔登法环》UI 复刻 · 装备与物品栏',
+    images: ['/assets/eldenring-ui-detail.jpg', '/assets/eldenring-ui-inventory.jpg'],
+  },
+]
 
 export const nav = [
   { id: 'about', label: '经历', en: 'ABOUT' },

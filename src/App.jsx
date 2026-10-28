@@ -17,6 +17,17 @@ export default function App() {
     return () => window.clearTimeout(t)
   }, [])
 
+  // 兜底：若 IntersectionObserver 未触发（旧浏览器 / 特殊环境），
+  // 3.5 秒后强制展开所有未显示的渐入元素，避免内容永久空白
+  useEffect(() => {
+    const t = window.setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.is-revealed)').forEach((el) => {
+        el.classList.add('is-revealed')
+      })
+    }, 3500)
+    return () => window.clearTimeout(t)
+  }, [])
+
   return (
     <>
       <Navbar />

@@ -5,6 +5,7 @@ import '@fontsource/space-grotesk/400.css'
 import '@fontsource/space-grotesk/500.css'
 import '@fontsource/space-grotesk/600.css'
 import './styles/global.css'
+import './styles/responsive.css'
 import App from './App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
