@@ -30,3 +30,6 @@ _assets_src/
 
 # Vite 临时文件
 vite.config.js.timestamp-*.mjs
+
+# Vite 临时文件
+vite.config.js.timestamp-*.mjs
