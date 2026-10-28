@@ -380,7 +380,7 @@ ul {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(8, 9, 12, 0.92) 0%, rgba(8, 9, 12, 0.55) 45%, rgba(8, 9, 12, 0.72) 100%),
-    linear-gradient(180deg, rgba(8, 9, 12, 0.6) 0%, rgba(8, 9, 12, 0.12) 32%, rgba(8, 9, 12, 0.55) 72%, var(--bg-0) 100%);
+    linear-gradient(180deg, rgba(8, 9, 12, 0.86) 0%, rgba(8, 9, 12, 0.5) 14%, rgba(8, 9, 12, 0.12) 34%, rgba(8, 9, 12, 0.55) 72%, var(--bg-0) 100%);
 }
 
 /* 科技感网格线，只在 Hero 出现 */
